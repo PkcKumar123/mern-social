@@ -18,7 +18,6 @@ const user = require("./routes/user");
 // Using Routes
 app.use("/api/v1", post);
 app.use("/api/v1", user);
-
 app.use(express.static(path.join(__dirname, "../frontend/build")));
 
 app.get("*", (req, res) => {
