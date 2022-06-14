@@ -5,12 +5,6 @@
   background: rgb(238, 218, 222);
 }
 
-.logo {
-  font-size: 20px;
-  font-weight: bold;
-  color: rgb(237, 15, 15);
-}
-
 .header > a {
   width: 2vmax;
   height: 2vmax;
@@ -35,8 +29,5 @@
   }
   .header > a > svg {
     font-size: 4vw;
-  }
-  .logo {
-    margin-top: 5px;
   }
 }

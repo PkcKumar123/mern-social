@@ -17,8 +17,6 @@ const Header = () => {
   return (
     <>
       <div className="header">
-        <div className="logo">Social Book</div>
-
         <Link to="/" onClick={() => setTab("/")}>
           {tab === "/" ? <Home style={{ color: "black" }} /> : <HomeOutlined />}
         </Link>
