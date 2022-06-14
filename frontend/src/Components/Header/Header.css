@@ -5,6 +5,12 @@
   background: rgb(238, 218, 222);
 }
 
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(237, 15, 15);
+}
+
 .header > a {
   width: 2vmax;
   height: 2vmax;
@@ -23,11 +29,14 @@
 
 @media screen and (max-width: 600px) {
   .header > a {
-    width: 8vw;
-    height: 8vw;
-    margin: 2vw 8vw;
+    width: 3vw;
+    height: 3vw;
+    margin: 2vw 4vw;
   }
   .header > a > svg {
-    font-size: 8vw;
+    font-size: 4vw;
+  }
+  .logo {
+    margin-top: 5px;
   }
 }

@@ -15,35 +15,39 @@ import {
 const Header = () => {
   const [tab, setTab] = useState(window.location.pathname);
   return (
-    <div className="header">
-      <Link to="/" onClick={() => setTab("/")}>
-        {tab === "/" ? <Home style={{ color: "black" }} /> : <HomeOutlined />}
-      </Link>
+    <>
+      <div className="header">
+        <div className="logo">Social Book</div>
 
-      <Link to="/newpost" onClick={() => setTab("/newpost")}>
-        {tab === "/newpost" ? (
-          <Add style={{ color: "black" }} />
-        ) : (
-          <AddOutlined />
-        )}
-      </Link>
+        <Link to="/" onClick={() => setTab("/")}>
+          {tab === "/" ? <Home style={{ color: "black" }} /> : <HomeOutlined />}
+        </Link>
 
-      <Link to="/search" onClick={() => setTab("/search")}>
-        {tab === "/search" ? (
-          <Search style={{ color: "black" }} />
-        ) : (
-          <SearchOutlined />
-        )}
-      </Link>
+        <Link to="/newpost" onClick={() => setTab("/newpost")}>
+          {tab === "/newpost" ? (
+            <Add style={{ color: "black" }} />
+          ) : (
+            <AddOutlined />
+          )}
+        </Link>
 
-      <Link to="/account" onClick={() => setTab("/account")}>
-        {tab === "/account" ? (
-          <AccountCircle style={{ color: "black" }} />
-        ) : (
-          <AccountCircleOutlined />
-        )}
-      </Link>
-    </div>
+        <Link to="/search" onClick={() => setTab("/search")}>
+          {tab === "/search" ? (
+            <Search style={{ color: "black" }} />
+          ) : (
+            <SearchOutlined />
+          )}
+        </Link>
+
+        <Link to="/account" onClick={() => setTab("/account")}>
+          {tab === "/account" ? (
+            <AccountCircle style={{ color: "black" }} />
+          ) : (
+            <AccountCircleOutlined />
+          )}
+        </Link>
+      </div>
+    </>
   );
 };
 
