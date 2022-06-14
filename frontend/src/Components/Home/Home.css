@@ -1,12 +1,12 @@
 .home {
   box-sizing: border-box;
-  display: grid;
-  grid-template-columns: 1fr 400px;
+  /* display: grid;
+  grid-template-columns: 1fr 400px; */
   height: 100vh;
 }
 
 .homeleft {
-  background-image: linear-gradient(to right, #fff5bc, #cec1ff);
+  background: #ffffff;
 
   overflow-y: auto;
   display: flex;

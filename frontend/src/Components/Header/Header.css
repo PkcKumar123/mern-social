@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: rgb(238, 218, 222);
 }
 
 .header > a {

@@ -131,7 +131,9 @@ const Post = ({
         onClick={() => setLikesUser(!likesUser)}
         disabled={likes.length === 0 ? true : false}
       >
-        <Typography>{likes.length} Likes</Typography>
+        <div className="likebtn">
+          <Typography>{likes.length} Likes</Typography>
+        </div>
       </button>
 
       <div className="postFooter">

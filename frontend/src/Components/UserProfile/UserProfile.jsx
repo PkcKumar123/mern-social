@@ -80,25 +80,6 @@ const UserProfile = () => {
 
   return (
     <div className="account">
-      <div className="accountleft">
-        {posts && posts.length > 0 ? (
-          posts.map((post) => (
-            <Post
-              key={post._id}
-              postId={post._id}
-              caption={post.caption}
-              postImage={post.image.url}
-              likes={post.likes}
-              comments={post.comments}
-              ownerImage={post.owner.avatar.url}
-              ownerName={post.owner.name}
-              ownerId={post.owner._id}
-            />
-          ))
-        ) : (
-          <Typography variant="h6">User has not made any post</Typography>
-        )}
-      </div>
       <div className="accountright">
         {user && (
           <>
@@ -187,6 +168,25 @@ const UserProfile = () => {
             )}
           </div>
         </Dialog>
+      </div>
+      <div className="accountleft">
+        {posts && posts.length > 0 ? (
+          posts.map((post) => (
+            <Post
+              key={post._id}
+              postId={post._id}
+              caption={post.caption}
+              postImage={post.image.url}
+              likes={post.likes}
+              comments={post.comments}
+              ownerImage={post.owner.avatar.url}
+              ownerName={post.owner.name}
+              ownerId={post.owner._id}
+            />
+          ))
+        ) : (
+          <Typography variant="h6">User has not made any post</Typography>
+        )}
       </div>
     </div>
   );

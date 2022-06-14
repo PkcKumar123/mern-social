@@ -55,27 +55,6 @@ const Account = () => {
 
   return (
     <div className="account">
-      <div className="accountleft">
-        {posts && posts.length > 0 ? (
-          posts.map((post) => (
-            <Post
-              key={post._id}
-              postId={post._id}
-              caption={post.caption}
-              postImage={post.image.url}
-              likes={post.likes}
-              comments={post.comments}
-              ownerImage={post.owner.avatar.url}
-              ownerName={post.owner.name}
-              ownerId={post.owner._id}
-              isAccount={true}
-              isDelete={true}
-            />
-          ))
-        ) : (
-          <Typography variant="h6">You have not made any post</Typography>
-        )}
-      </div>
       <div className="accountright">
         <Avatar
           src={user.avatar.url}
@@ -107,8 +86,12 @@ const Account = () => {
           Logout
         </Button>
 
-        <Link to="/update/profile">Edit Profile</Link>
-        <Link to="/update/password">Change Password</Link>
+        <Link className="editlink" to="/update/profile">
+          Edit Profile
+        </Link>
+        <Link className="editlink" to="/update/password">
+          Change Password
+        </Link>
 
         {/* <Button
           variant="text"
@@ -166,6 +149,27 @@ const Account = () => {
             )}
           </div>
         </Dialog>
+      </div>
+      <div className="accountleft">
+        {posts && posts.length > 0 ? (
+          posts.map((post) => (
+            <Post
+              key={post._id}
+              postId={post._id}
+              caption={post.caption}
+              postImage={post.image.url}
+              likes={post.likes}
+              comments={post.comments}
+              ownerImage={post.owner.avatar.url}
+              ownerName={post.owner.name}
+              ownerId={post.owner._id}
+              isAccount={true}
+              isDelete={true}
+            />
+          ))
+        ) : (
+          <Typography variant="h6">You have not made any post</Typography>
+        )}
       </div>
     </div>
   );

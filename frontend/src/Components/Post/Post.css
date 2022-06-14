@@ -1,6 +1,6 @@
 .post {
   width: 60%;
-  background-color: #fff;
+  background: #d6f2f0;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   padding: 0 1vmax 2vmax;
@@ -20,6 +20,11 @@
 
 .post > img {
   width: 100%;
+  border-radius: 5px;
+}
+
+.likebtn {
+  background: #d6f2f0;
 }
 
 .postDetails {
