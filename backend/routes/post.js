@@ -27,7 +27,7 @@ router.route("/posts").get(isAuthenticated, getPostOfFollowing);
 
 router
   .route("/post/comment/:id")
-  .put(isAuthenticated, csrfProtection, commentOnPost)
+  .put(isAuthenticated, commentOnPost)
   .delete(isAuthenticated, csrfProtection, deleteComment);
 
 module.exports = router;
