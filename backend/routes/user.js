@@ -16,7 +16,10 @@ const {
   getUserPosts,
 } = require("../controllers/user");
 const { isAuthenticated } = require("../middlewares/auth");
+var csrf = require("csurf");
 const router = express.Router();
+
+var csrfProtection = csrf({ cookie: true });
 
 router.route("/register").post(register);
 
@@ -26,11 +29,17 @@ router.route("/logout").get(logout);
 
 router.route("/follow/:id").get(isAuthenticated, followUser);
 
-router.route("/update/password").put(isAuthenticated, updatePassword);
+router
+  .route("/update/password")
+  .put(isAuthenticated, csrfProtection, updatePassword);
 
-router.route("/update/profile").put(isAuthenticated, updateProfile);
+router
+  .route("/update/profile")
+  .put(isAuthenticated, csrfProtection, updateProfile);
 
-router.route("/delete/me").delete(isAuthenticated, deleteMyProfile);
+router
+  .route("/delete/me")
+  .delete(isAuthenticated, csrfProtection, deleteMyProfile);
 router.route("/me").get(isAuthenticated, myProfile);
 
 router.route("/my/posts").get(isAuthenticated, getMyPosts);
